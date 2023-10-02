@@ -1,0 +1,51 @@
+<!-- <div *ngFor="let item of [1, 3, 5]">
+  <p>Number is: {{ item }}</p>
+</div> -->
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <!-- <th scope="col">Index</th> -->
+      <th scope="col">#</th>
+      <th scope="col">Thumbnail</th>
+      <th scope="col">Name</th>
+      <!-- <th scope="col">Description</th> -->
+      <th scope="col">Price</th>
+      <th scope="col">Discount %</th>
+      <th scope="col">Rating</th>
+      <th scope="col">Stock</th>
+      <th scope="col">Available</th>
+      <th scope="col">Brand</th>
+      <th scope="col">Category</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let product of products; let i = index">
+    <tr>
+      <!-- <th scope="row">{{ i }}</th> -->
+      <th scope="row">{{ product.id }}</th>
+      <td>
+        <img
+          [src]="product.thumbnail"
+          alt="product.title"
+          height="75"
+          width="100"
+        />
+      </td>
+      <td>{{ product.title }}</td>
+      <!-- <td>{{ product.description }}</td> -->
+      <td>{{ product.price }}</td>
+      <td>{{ product.discountPercentage }}</td>
+      <td>{{ product.rating }}</td>
+      <td>{{ product.stock }}</td>
+      <!-- <td><input type="checkbox" disabled [checked]="product.stock > 0" /></td> -->
+      <td>{{ product.stock > 0 ? "Available" : "NA" }}</td>
+      <td>{{ product.brand }}</td>
+      <td>{{ product.category }}</td>
+      <td>
+        <button class="btn btn-success">Show details</button>
+        <button class="btn btn-warning">Buy now</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -1,17 +1,36 @@
 <div class="container">
-  <h3>Current time is: {{ time }}</h3>
-  <button
-    [ngClass]="[
-      'btn',
-      counter % 2 == 0
-        ? 'btn-primary'
-        : counter % 3 == 0
-        ? 'btn-success'
-        : 'btn-warning'
-    ]"
-    (click)="incrementAndGetChangedSlogan()"
-  >
-    Change slogan
-  </button>
-  <h4>{{ getSlogan() }}</h4>
+  <div class="contentInfo">
+    <div>
+      <img [src]="source" width="350" height="210" alt="e-web" />
+    </div>
+    <br />
+    <div>
+      <button
+        (click)="showOrHideNotificationBar()"
+        [ngClass]="[
+          'btn',
+          displayNotification ? 'btn-primary' : 'btn-secondary'
+        ]"
+      >
+        Notification bar is {{ displayNotification ? "shown" : "hidden" }}
+      </button>
+    </div>
+  </div>
+  <div class="contentData">
+    <button
+      [ngClass]="[
+        'btn',
+        counter % 2 == 0
+          ? 'btn-primary'
+          : counter % 3 == 0
+          ? 'btn-success'
+          : 'btn-warning'
+      ]"
+      (click)="incrementAndGetChangedSlogan()"
+    >
+      Change slogan
+    </button>
+    <h4>{{ getSlogan() }}</h4>
+    <h5><u>Current time is:</u> {{ time }}</h5>
+  </div>
 </div>

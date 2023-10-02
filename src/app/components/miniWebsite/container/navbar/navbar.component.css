@@ -15,17 +15,23 @@
   padding: 30px;
 }
 
-.menuItems > a {
-  margin: 5px;
-  padding: 5px;
+.menuItems > li {
+  list-style-type: none;
+}
+
+a {
+  /* margin: 2px; */
+  padding: 2px 0;
   text-decoration: none;
   color: black;
   overflow: hidden;
 }
 
-.menuItems > a:hover {
+a:hover {
+  margin: 5px 0;
+  padding: 5px 0;
   text-decoration: underline;
-  font-weight: bold;
+  /* font-weight: bold; */
   background-color: antiquewhite;
   border-radius: 3px;
   transition: text-decoration 2s ease-in;

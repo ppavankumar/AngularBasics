@@ -1,4 +1,12 @@
 .container {
   background-color: beige;
   height: 300px;
+  display: flex;
+  /* border: 1px solid black; */
+  margin: 5px 2px;
+}
+
+.contentData,
+.contentInfo {
+  margin: 5px 0;
 }

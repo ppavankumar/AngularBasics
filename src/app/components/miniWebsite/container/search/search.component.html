@@ -1,0 +1,24 @@
+<div>
+  <div class="input-group flex-nowrap">
+    <span class="input-group-text" id="addon-wrapping">Search</span>
+    <!-- <input
+      type="text"
+      (input)="changeSearchValue($event)"
+      class="form-control"
+      placeholder="Username"
+      aria-label="Username"
+      aria-describedby="addon-wrapping"
+    /> -->
+    <input
+      type="text"
+      [(ngModel)]="searchValue"
+      class="form-control"
+      placeholder="Username"
+      aria-label="Username"
+      aria-describedby="addon-wrapping"
+    />
+  </div>
+  <div>
+    <h4>You searched for: {{ !searchValue ? "nothing" : searchValue }}</h4>
+  </div>
+</div>

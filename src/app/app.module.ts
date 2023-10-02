@@ -1,11 +1,14 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
 
-import { AppComponent } from './app.component';
-import { ContainerComponent } from './components/miniWebsite/container/container.component';
-import { NavbarComponent } from './components/miniWebsite/container/navbar/navbar.component';
-import { ContentComponent } from './components/miniWebsite/container/content/content.component';
-import { NotificationComponent } from './components/miniWebsite/container/notification/notification.component';
+import { AppComponent } from "./app.component";
+import { ContainerComponent } from "./components/miniWebsite/container/container.component";
+import { NavbarComponent } from "./components/miniWebsite/container/navbar/navbar.component";
+import { ContentComponent } from "./components/miniWebsite/container/content/content.component";
+import { NotificationComponent } from "./components/miniWebsite/container/notification/notification.component";
+import { SearchComponent } from "./components/miniWebsite/container/search/search.component";
+import { FormsModule } from "@angular/forms";
+import { ProductsComponent } from './components/miniWebsite/container/products/products.component';
 
 @NgModule({
   declarations: [
@@ -13,12 +16,12 @@ import { NotificationComponent } from './components/miniWebsite/container/notifi
     ContainerComponent,
     NavbarComponent,
     ContentComponent,
-    NotificationComponent
+    NotificationComponent,
+    SearchComponent,
+    ProductsComponent,
   ],
-  imports: [
-    BrowserModule
-  ],
+  imports: [BrowserModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
