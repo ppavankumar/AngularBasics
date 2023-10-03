@@ -19,6 +19,6 @@
     />
   </div>
   <div>
-    <h4>You searched for: {{ !searchValue ? "nothing" : searchValue }}</h4>
+    <h4 *ngIf="searchValue">Filtering by: {{ !searchValue ? "nothing" : searchValue }}</h4>
   </div>
 </div>
