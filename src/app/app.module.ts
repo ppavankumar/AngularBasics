@@ -8,7 +8,11 @@ import { ContentComponent } from "./components/miniWebsite/container/content/con
 import { NotificationComponent } from "./components/miniWebsite/container/notification/notification.component";
 import { SearchComponent } from "./components/miniWebsite/container/search/search.component";
 import { FormsModule } from "@angular/forms";
-import { ProductsComponent } from './components/miniWebsite/container/products/products.component';
+import { ProductsComponent } from "./components/miniWebsite/container/products/products.component";
+import { CoursesComponent } from "./components/miniWebsite/courses/courses.component";
+import { HeaderComponent } from "./components/miniWebsite/courses/header/header.component";
+import { CoursesSearchComponent } from "./components/miniWebsite/courses/search/search.component";
+import { CoursesFilterComponent } from "./components/miniWebsite/courses/filter/filter.component";
 
 @NgModule({
   declarations: [
@@ -19,6 +23,10 @@ import { ProductsComponent } from './components/miniWebsite/container/products/p
     NotificationComponent,
     SearchComponent,
     ProductsComponent,
+    CoursesComponent,
+    HeaderComponent,
+    CoursesSearchComponent,
+    CoursesFilterComponent,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],
