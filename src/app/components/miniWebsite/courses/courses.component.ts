@@ -127,4 +127,11 @@ export class CoursesComponent {
   getTotalPremiumCourses = () => {
     return this.courses.filter((course) => course.price > 0).length;
   };
+
+  courseCountRadioButton: string = "all";
+
+  onFilterRadioButtonChanged = (data: string) => {
+    this.courseCountRadioButton = data;
+    // console.log(this.courseCountRadioButton);
+  };
 }

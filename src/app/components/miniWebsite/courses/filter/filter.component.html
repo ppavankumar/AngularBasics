@@ -4,15 +4,33 @@
       >Filter:</label
     >
     <label class="radio-inline">
-      <input type="radio" name="coursesFilter" value="all" checked />
+      <input
+        type="radio"
+        name="coursesFilter"
+        value="all"
+        [(ngModel)]="selectedCoursesType"
+        (change)="onSelectedCoursesTypeChange()"
+      />
       All Courses {{ "(" + all + ")" }} </label
     >&nbsp;
     <label class="radio-inline">
-      <input type="radio" name="coursesFilter" value="free" />
+      <input
+        type="radio"
+        name="coursesFilter"
+        value="free"
+        [(ngModel)]="selectedCoursesType"
+        (change)="onSelectedCoursesTypeChange()"
+      />
       Free Courses {{ "(" + free + ")" }} </label
     >&nbsp;
     <label class="radio-inline">
-      <input type="radio" name="coursesFilter" value="premium" />
+      <input
+        type="radio"
+        name="coursesFilter"
+        value="premium"
+        [(ngModel)]="selectedCoursesType"
+        (change)="onSelectedCoursesTypeChange()"
+      />
       Premium Courses {{ "(" + premium + ")" }}
     </label>
   </div>

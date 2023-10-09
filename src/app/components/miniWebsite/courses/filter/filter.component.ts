@@ -1,4 +1,4 @@
-import { Component, Input } from "@angular/core";
+import { Component, EventEmitter, Input, Output } from "@angular/core";
 
 @Component({
   selector: "app-courses-filter",
@@ -14,4 +14,14 @@ export class CoursesFilterComponent {
 
   @Input()
   premium: number = 0;
+
+  selectedCoursesType: string = "all";
+
+  @Output()
+  filterSelectedCoursesTypeChanged: EventEmitter<string> = new EventEmitter();
+
+  onSelectedCoursesTypeChange = () => {
+    this.filterSelectedCoursesTypeChanged.emit(this.selectedCoursesType);
+    // console.log(this.selectedCoursesType);
+  };
 }

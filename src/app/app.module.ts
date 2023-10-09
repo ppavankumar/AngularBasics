@@ -13,6 +13,8 @@ import { CoursesComponent } from "./components/miniWebsite/courses/courses.compo
 import { HeaderComponent } from "./components/miniWebsite/courses/header/header.component";
 import { CoursesSearchComponent } from "./components/miniWebsite/courses/search/search.component";
 import { CoursesFilterComponent } from "./components/miniWebsite/courses/filter/filter.component";
+import { ColorFillComponent } from "./components/miniWebsite/color-fill/color-fill.component";
+import { ColorValueComponent } from "./components/miniWebsite/color-fill/color-value/color-value.component";
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import { CoursesFilterComponent } from "./components/miniWebsite/courses/filter/
     HeaderComponent,
     CoursesSearchComponent,
     CoursesFilterComponent,
+    ColorFillComponent,
+    ColorValueComponent,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],

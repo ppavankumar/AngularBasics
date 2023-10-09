@@ -5,6 +5,7 @@
       [all]="getTotalCourses()"
       [free]="getTotalFreeCourses()"
       [premium]="getTotalPremiumCourses()"
+      (filterSelectedCoursesTypeChanged)="onFilterRadioButtonChanged($event)"
     ></app-courses-filter>
   </div>
   <!-- <div class="row col-8 d-flex justify-content-center">
@@ -32,42 +33,52 @@
   <div
     class="col-8 d-flex text-center row row-cols-1 row-cols-md-3 g-4 courses-content"
   >
-    <div class="col" *ngFor="let course of courses">
-      <div class="card h-100">
-        <img
-          [src]="
-            'https://dummyimage.com/400x400/000000/ffffff&text=' + course.title
-          "
-          class="card-img-top"
-          alt="..."
-        />
-        <div class="card-body">
-          <h5 class="card-title">{{ course.title }}</h5>
-          <p class="card-text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni,
-            veniam.
-          </p>
-          <div class="typeAndPrice">
-            <div>
-              <span
-                [ngStyle]="{
-                  color: course.price > 0 ? 'red' : 'green',
-                  fontWeight: 'bold'
-                }"
-                >{{ course.price > 0 ? "Premium" : "Free" }}</span
-              >
+    <ng-container *ngFor="let course of courses">
+      <div
+        class="col"
+        *ngIf="
+          courseCountRadioButton === 'all' ||
+          (course.price === 0 && courseCountRadioButton === 'free') ||
+          (course.price > 0 && courseCountRadioButton === 'premium')
+        "
+      >
+        <div class="card h-100">
+          <img
+            [src]="
+              'https://dummyimage.com/400x400/000000/ffffff&text=' +
+              course.title
+            "
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">{{ course.title }}</h5>
+            <p class="card-text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni,
+              veniam.
+            </p>
+            <div class="typeAndPrice">
+              <div>
+                <span
+                  [ngStyle]="{
+                    color: course.price > 0 ? 'red' : 'green',
+                    fontWeight: 'bold'
+                  }"
+                  >{{ course.price > 0 ? "Premium" : "Free" }}</span
+                >
+              </div>
+              <div>Price: $ {{ course.price }}</div>
             </div>
-            <div>Price: $ {{ course.price }}</div>
+            <div>
+              <button class="btn btn-primary">Buy now</button>&nbsp;
+              <button class="btn btn-outline-primary">Show details</button>
+            </div>
           </div>
-          <div>
-            <button class="btn btn-primary">Buy now</button>&nbsp;
-            <button class="btn btn-outline-primary">Show details</button>
+          <div class="card-footer">
+            <small class="text-body-secondary">Last updated 3 mins ago</small>
           </div>
-        </div>
-        <div class="card-footer">
-          <small class="text-body-secondary">Last updated 3 mins ago</small>
         </div>
       </div>
-    </div>
+    </ng-container>
   </div>
 </div>
