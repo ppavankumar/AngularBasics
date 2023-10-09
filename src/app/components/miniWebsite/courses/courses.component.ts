@@ -134,4 +134,17 @@ export class CoursesComponent {
     this.courseCountRadioButton = data;
     // console.log(this.courseCountRadioButton);
   };
+
+  searchForNewCourse: string = "";
+
+  searchForNewCourseEvent = (data: string) => {
+    this.searchForNewCourse = data;
+    // console.log(this.searchForNewCourse);
+    // console.log(
+    //   this.courses.forEach(
+    //     (course) =>
+    //       course.title.includes(this.searchForNewCourse) && console.log(course)
+    //   )
+    // );
+  };
 }

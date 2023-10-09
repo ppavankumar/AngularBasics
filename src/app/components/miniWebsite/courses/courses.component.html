@@ -1,6 +1,8 @@
 <div class="row d-flex justify-content-center">
   <div class="row col-8 d-flex justify-content-center">
-    <app-courses-search></app-courses-search>
+    <app-courses-search
+      (searchNewCourseEvent)="searchForNewCourseEvent($event)"
+    ></app-courses-search>
     <app-courses-filter
       [all]="getTotalCourses()"
       [free]="getTotalFreeCourses()"
@@ -8,38 +10,19 @@
       (filterSelectedCoursesTypeChanged)="onFilterRadioButtonChanged($event)"
     ></app-courses-filter>
   </div>
-  <!-- <div class="row col-8 d-flex justify-content-center">
-    <app-header [title]="title"></app-header>
-    <!-- <table class="table table-striped table-hover">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">First</th>
-          <th scope="col">Last</th>
-          <th scope="col">Handle</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let course of courses">
-          <th scope="row">{{ course.id }}</th>
-          <td>{{ course.title }}</td>
-          <td>{{ course.desc }}</td>
-          <td>{{ course.price }}</td>
-        </tr>
-      </tbody>
-    </table> --
-  </div> -->
 
   <div
     class="col-8 d-flex text-center row row-cols-1 row-cols-md-3 g-4 courses-content"
   >
     <ng-container *ngFor="let course of courses">
+      <!-- courseCountRadioButton === 'all' ||
+          (course.price === 0 && courseCountRadioButton === 'free') ||
+          (course.price > 0 && courseCountRadioButton === 'premium') -->
       <div
         class="col"
         *ngIf="
-          courseCountRadioButton === 'all' ||
-          (course.price === 0 && courseCountRadioButton === 'free') ||
-          (course.price > 0 && courseCountRadioButton === 'premium')
+          this.searchForNewCourse === '' ||
+          course.title.toLowerCase().includes(this.searchForNewCourse)
         "
       >
         <div class="card h-100">
