@@ -6,15 +6,6 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-button {
-  width: 120px;
-  height: auto;
-  padding: 10px;
-  border: none;
-  text-align: center;
-  background-color: coral;
-}
-
 /* .centerDiv {
   position: absolute;
   top: 0;

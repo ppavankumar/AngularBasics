@@ -1,16 +1,3 @@
-/* * {
-  padding: 10px;
-  margin: 0;
-  line-height: 25px;
-  word-spacing: 2px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-} */
-
-.container {
-  padding: 20px 30px;
-  background-color: #eee;
-}
-
 .card {
   padding: 10px 10px;
   margin: 0px 10px;
@@ -20,10 +7,6 @@
 
 .summary {
   font-size: 14px;
-}
-
-.more-products {
-  display: flex;
 }
 
 .btn-more {
