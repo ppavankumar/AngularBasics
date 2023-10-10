@@ -6,5 +6,17 @@ import { Component, ViewEncapsulation } from "@angular/core";
   styleUrls: ["./app.component.css"],
 })
 export class AppComponent {
-  title = "ViewEncapsulation";
+  title = "LifeCycleHook";
+
+  inputText: string = "";
+
+  destroy: boolean = true;
+
+  onSubmit = (input: HTMLInputElement) => {
+    this.inputText = input.value;
+  };
+
+  destroyComponent() {
+    this.destroy = false;
+  }
 }
