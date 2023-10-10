@@ -9,6 +9,8 @@ import { Customer } from "./customer";
 export class CustomerListComponent {
   selectedCustomer!: Customer;
 
+  title: string = "All Customers";
+
   customers: Customer[] = [
     {
       customerNo: 1,
