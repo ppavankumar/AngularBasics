@@ -4,7 +4,9 @@ import {
   AfterViewChecked,
   AfterViewInit,
   Component,
+  ContentChild,
   DoCheck,
+  ElementRef,
   Input,
   OnChanges,
   OnDestroy,
@@ -17,55 +19,17 @@ import {
   templateUrl: "./demo.component.html",
   styleUrls: ["./demo.component.css"],
 })
-export class DemoComponent
-  implements
-    OnInit,
-    OnChanges,
-    DoCheck,
-    AfterContentInit,
-    AfterContentChecked,
-    AfterViewInit,
-    AfterViewChecked,
-    OnDestroy
-{
-  @Input() value: string = "AngularApp";
+export class DemoComponent {
+  @Input() title: string = "";
 
-  constructor() {
-    console.log("demo component constructor called");
-    // console.log(this.value);
-  }
-
-  ngOnChanges(change: SimpleChanges) {
-    console.log("ngOnChanges called");
-    console.log(change);
-  }
+  @ContentChild("paragraph") paragraphEl: ElementRef;
 
   ngOnInit() {
-    console.log("ngOnInit called");
-    // console.log(this.value);
-  }
-
-  ngDoCheck(): void {
-    console.log("ngDoCheck called");
+    console.log(this.paragraphEl);
   }
 
   ngAfterContentInit() {
-    console.log("ngAfterContentInit called");
-  }
-
-  ngAfterContentChecked() {
-    console.log("ngAfterContentChecked called");
-  }
-
-  ngAfterViewInit(): void {
-    console.log("ngAfterViewInit called");
-  }
-
-  ngAfterViewChecked(): void {
-    console.log("ngAfterViewChecked called");
-  }
-
-  ngOnDestroy(): void {
-    console.log("ngOnDestroy called");
+    this.paragraphEl.nativeElement.textContent = "This is a new paragraph.";
+    console.log(this.paragraphEl.nativeElement.textContent);
   }
 }

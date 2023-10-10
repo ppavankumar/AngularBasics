@@ -1,10 +1,4 @@
-<div class="container">
-  <input type="text" #input />&nbsp;
-  <button (click)="onSubmit(input)">Submit</button>
-  <app-demo [value]="inputText" *ngIf="destroy">
-    <h4>This is projected content: {{ inputText }}</h4>
-  </app-demo><br><br>
-  <button (click)="destroyComponent()">Destroy</button>
-  <!-- <app-demo [value]="inputText"></app-demo>
-  <app-demo [value]="inputText"></app-demo> -->
-</div>
+<h1>Parent Component</h1>
+<app-demo [title]="title">
+  <p #paragraph>This is a paragraph</p>
+</app-demo>
