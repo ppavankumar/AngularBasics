@@ -1,0 +1,11 @@
+.comp1-component {
+  text-align: center;
+  width: 370px;
+  height: 200px;
+  border: #bbb 2px solid;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-top: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
