@@ -1,2 +1,6 @@
-<input type="text" #myVariable (keyup)="(0)" />
-<p>{{ myVariable.value }}</p>
+<div class="centerDiv">
+  <b>Enter any text: </b>
+  <input type="text" #myVariable (keyup)="(0)" />
+  <button (click)="getMyVariableValue(myVariable)">Greet</button>
+  <h3>{{ myVariable.value }}</h3>
+</div>
