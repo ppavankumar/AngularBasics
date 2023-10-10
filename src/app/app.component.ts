@@ -6,5 +6,5 @@ import { Component, ViewEncapsulation } from "@angular/core";
   styleUrls: ["./app.component.css"],
 })
 export class AppComponent {
-  title = "ContentChild";
+  title = "CustomDirective";
 }

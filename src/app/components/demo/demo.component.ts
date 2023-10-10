@@ -20,16 +20,4 @@ import {
   styleUrls: ["./demo.component.css"],
 })
 export class DemoComponent {
-  @Input() title: string = "";
-
-  @ContentChild("paragraph") paragraphEl: ElementRef;
-
-  ngOnInit() {
-    console.log(this.paragraphEl);
-  }
-
-  ngAfterContentInit() {
-    this.paragraphEl.nativeElement.textContent = "This is a new paragraph.";
-    console.log(this.paragraphEl.nativeElement.textContent);
-  }
 }

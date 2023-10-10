@@ -1,4 +1,11 @@
-<h1>Parent Component</h1>
-<app-demo [title]="title">
-  <p #paragraph>This is a paragraph</p>
-</app-demo>
+<h1 setBackground>{{ title }}</h1>
+<div class="container" setBackground>
+  <h3>
+    This is a demo HTML content to understand custom directive in Angular.
+  </h3>
+</div>
+<div appHighlight>
+  <h3>
+    This is a demo HTML content to understand custom directive in Angular.
+  </h3>
+</div>
