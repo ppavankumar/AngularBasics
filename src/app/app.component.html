@@ -1,4 +1,4 @@
-<h1 setBackground>{{ title }}</h1>
+<!-- <h1 setBackground>{{ title }}</h1>
 <div class="container" setBackground appHover>
   <h3>
     This is a demo HTML content to understand custom directive in Angular.
@@ -9,8 +9,20 @@
     This is a demo HTML content to understand custom directive in Angular.
   </h3>
 </div>
-<div class="container" appBetterHighlight>
-  <h3>
-    This is a demo HTML content to understand @HostBinding in Angular.
-  </h3>
+<div
+  class="container"
+  [appBetterHighlight]="'red'"
+  [title]="'Example title'"
+  [defaultColor]="'yellow'"
+>
+  <h3>This is a demo HTML content to understand @HostBinding in Angular.</h3>
 </div>
+
+<div [appClass]="{ container: true, 'change-font': true }">
+  <h3>
+    This is a demo HTML content to understand how to create a custom ngClass
+    directive in Angular.
+  </h3>
+</div> -->
+
+<app-highest-likes-component></app-highest-likes-component>

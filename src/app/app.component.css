@@ -12,3 +12,8 @@
   margin: 10px;
   text-align: center;
 }
+
+.change-font {
+  font-size: 16px;
+  background-color: rgb(167, 166, 252);
+}
