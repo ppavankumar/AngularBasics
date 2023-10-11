@@ -1,35 +1,36 @@
 <div class="container">
   <div class="row">
-    <div class="row">
-      <h1>{{ title }}</h1>
-    </div>
-    <div class="row">
-      <table class="table table-striped">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Firstname</th>
-            <th scope="col">Lastname</th>
-            <th scope="col">Surname</th>
-            <th scope="col">Age</th>
-            <th scope="col">Gender</th>
-            <th scope="col">Email</th>
-            <th scope="col">Username</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let user of users" appCustom50PlusAgeHighlightDirective>
-            <th scope="row">{{ user.id }}</th>
-            <th scope="row">{{ user.firstName }}</th>
-            <th scope="row">{{ user.lastName }}</th>
-            <th scope="row">{{ user.maidenName }}</th>
-            <th scope="row">{{ user.age }}</th>
-            <th scope="row">{{ user.gender }}</th>
-            <th scope="row">{{ user.email }}</th>
-            <th scope="row">{{ user.username }}</th>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <input type="text" appRainbow />
+  </div>
+  <div class="row">
+    <h1>{{ title }}</h1>
+  </div>
+  <div class="row">
+    <table class="">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Firstname</th>
+          <th scope="col">Lastname</th>
+          <th scope="col">Surname</th>
+          <th scope="col">Age</th>
+          <th scope="col">Gender</th>
+          <th scope="col">Email</th>
+          <th scope="col">Username</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users" appCustom50PlusAgeHighlightDirective>
+          <th scope="row">{{ user.id }}</th>
+          <th scope="row">{{ user.firstName }}</th>
+          <th scope="row">{{ user.lastName }}</th>
+          <th scope="row">{{ user.maidenName }}</th>
+          <th scope="row">{{ user.age }}</th>
+          <th scope="row">{{ user.gender }}</th>
+          <th scope="row">{{ user.email }}</th>
+          <th scope="row">{{ user.username }}</th>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>

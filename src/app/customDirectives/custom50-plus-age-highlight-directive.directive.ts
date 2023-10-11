@@ -15,9 +15,11 @@ export class Custom50PlusAgeHighlightDirectiveDirective {
 
   @Input() defaultHighlightColor = "white";
 
-  @HostBinding("style.backgroundColor") background = "red";
+  @HostBinding("style.background-color") background = "red";
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.background = this.defaultHighlightColor;
+  }
 
   @HostListener("mouseenter") mouseEnter() {
     // console.log('enter')
