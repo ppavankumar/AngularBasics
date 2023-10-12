@@ -25,4 +25,14 @@ export class RainbowDirective {
     let randomColor = Math.floor(Math.random() * this.possibleColors.length);
     this.color = this.borderColor = this.possibleColors[randomColor];
   }
+
+  @HostListener("mouseenter") mouseenter() {
+    let randomColor = Math.floor(Math.random() * this.possibleColors.length);
+    this.color = this.borderColor = this.possibleColors[randomColor];
+  }
+
+  @HostListener("mouseleave") mouseleave() {
+    let randomColor = Math.floor(Math.random() * this.possibleColors.length);
+    this.color = this.borderColor = this.possibleColors[randomColor];
+  }
 }

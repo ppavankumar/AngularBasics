@@ -1,4 +1,83 @@
-<div class="container">
+<div
+  class="container"
+  [appStyle]="{ backgroundColor: 'pink', color: 'red', fontWeight: 'bold' }"
+>
+  <p>
+    This is a demo HTML content to understand how to create custom ngStyle
+    directive in Angular.
+  </p>
+</div>
+
+<!-- <div class="container-fluid">
+  <button
+    class="btn btn-outline-warning"
+    style="color: black"
+    (click)="displayNotice()"
+  >
+    Show notice
+  </button>
+  <div class="well" *ngIf="display; else myVar">
+    <h3>This is an important notice</h3>
+    <p>This is a notice issued for all website users.</p>
+  </div>
+  <ng-template #myVar>
+    <h4>No notices to display!</h4>
+  </ng-template> -->
+
+<!-- <h1 *ngIfElse="display">Some header</h1>
+
+  <ng-template [ngIf]="display" [ngIfElse]="myVar">
+    <div class="well">
+      <h3>This is an important notice</h3>
+      <p>This is a notice issued for all website users.</p>
+    </div>
+  </ng-template>
+
+  <ng-template #myVar>
+    <h4>No notices to display!</h4>
+  </ng-template>
+</div>-->
+
+<div class="container-fluid">
+  <button
+    class="btn btn-outline-warning"
+    style="color: black"
+    (click)="displayNotice()"
+  >
+    Show notice
+  </button>
+  <div class="well" *appIf="display">
+    <h3>This is an important notice</h3>
+    <p>This is a notice issued for all website users.</p>
+  </div>
+</div>
+
+<br />
+<br />
+
+<div class="container-fluid" [ngSwitch]="occupation">
+  <p *ngSwitchCase="'teacher'">
+    This will be displayed when occupation is teacher.
+  </p>
+  <p *ngSwitchCase="'designer'">
+    This will be displayed when occupation is designer.
+  </p>
+  <p *ngSwitchCase="'lawyer'">
+    This will be displayed when occupation is lawyer.
+  </p>
+  <p *ngSwitchDefault="'default'">
+    This is default and will be displayed if no case matches switch expression.
+  </p>
+</div>
+
+<!-- <ng-template [ngIf]="display">
+  <div class="well">
+    <h3>This is an important notice</h3>
+    <p>This is a notice issued for all website users.</p>
+  </div>
+</ng-template> -->
+
+<!-- <div class="container">
   <div class="row">
     <input type="text" appRainbow />
   </div>
@@ -33,4 +112,4 @@
       </tbody>
     </table>
   </div>
-</div>
+</div> -->

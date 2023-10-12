@@ -310,4 +310,12 @@ export class AppComponent {
       username: "kdulyt",
     },
   ];
+
+  display: boolean = false;
+
+  displayNotice() {
+    this.display = !this.display;
+  }
+
+  occupation: string = "lawyer1";
 }
