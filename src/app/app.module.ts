@@ -3,23 +3,20 @@ import { BrowserModule } from "@angular/platform-browser";
 
 import { AppComponent } from "./app.component";
 import { FormsModule } from "@angular/forms";
-import { DemoComponent } from "./components/demo/demo.component";
-import { Custom50PlusAgeHighlightDirectiveDirective } from "./customDirectives/custom50-plus-age-highlight-directive.directive";
-import { RainbowDirective } from "./customDirectives/rainbow.directive";
-import { StyleDirective } from "./customDirectives/style.directive";
-import { IfDirective } from './customDirectives/if.directive';
+import { JavascriptCourseComponent } from "./components/javascript-course/javascript-course.component";
+import { TypescriptCourseComponent } from "./components/typescript-course/typescript-course.component";
+import { AngularCourseComponent } from "./components/angular-course/angular-course.component";
+import { EnrollService } from "./services/enroll.service";
 
 @NgModule({
   declarations: [
     AppComponent,
-    DemoComponent,
-    Custom50PlusAgeHighlightDirectiveDirective,
-    RainbowDirective,
-    StyleDirective,
-    IfDirective,
+    JavascriptCourseComponent,
+    TypescriptCourseComponent,
+    AngularCourseComponent,
   ],
   imports: [BrowserModule, FormsModule],
-  providers: [],
+  providers: [EnrollService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
