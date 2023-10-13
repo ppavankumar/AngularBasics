@@ -1,5 +1,6 @@
+import { User2 } from "../models/user2.model";
 import { LoggerService } from "./logger.service";
-import { Injectable } from "@angular/core";
+import { EventEmitter, Injectable } from "@angular/core";
 
 @Injectable({
   providedIn: "root",
@@ -352,4 +353,10 @@ export class UserService {
     this.users1.push({ id: 0, name: name, status: status });
     this.logger.logMessage(name, status);
   };
+
+  displayUserDetailsClicked = new EventEmitter<User2>();
+
+  displayUserDetails(user: User2) {
+    this.displayUserDetailsClicked.emit(user);
+  }
 }
