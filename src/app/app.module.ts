@@ -3,20 +3,12 @@ import { BrowserModule } from "@angular/platform-browser";
 
 import { AppComponent } from "./app.component";
 import { FormsModule } from "@angular/forms";
-import { JavascriptCourseComponent } from "./components/javascript-course/javascript-course.component";
-import { TypescriptCourseComponent } from "./components/typescript-course/typescript-course.component";
-import { AngularCourseComponent } from "./components/angular-course/angular-course.component";
-import { EnrollService } from "./services/enroll.service";
+import { AddUserComponent } from './components/add-user/add-user.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    JavascriptCourseComponent,
-    TypescriptCourseComponent,
-    AngularCourseComponent,
-  ],
+  declarations: [AppComponent, AddUserComponent],
   imports: [BrowserModule, FormsModule],
-  providers: [EnrollService],
+  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
