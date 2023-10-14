@@ -1,5 +1,4 @@
 import { Component, OnInit } from "@angular/core";
-import { Observable } from "rxjs";
 import { Product } from "src/app/models/product.model";
 import { ProductsService } from "src/app/services/products.service";
 
@@ -20,4 +19,8 @@ export class ProductsListComponent implements OnInit {
       .subscribe((res) => (this.products = res));
     // console.log(this.products);
   }
+
+  showProductDetails = (product: Product) => {
+    this.productService.showDetails(product);
+  };
 }
