@@ -1,161 +1,20 @@
-<!-- <div
-  class="container-fluid"
-  style="max-width: 800px; align-items: center; align-content: center"
->
-  <div class="row">
-    <app-add-user></app-add-user>
-  </div>
-  <div class="row">
-    <app-list-all-users></app-list-all-users>
-    <app-user-details></app-user-details>
-  </div>
-</div> -->
-
-<!-- <div class="container-fluid">
-  <div class="row">
-    <app-products-list></app-products-list>
-  </div>
-  <div class="row">
-    <app-product-details></app-product-details>
-  </div>
-</div> -->
-
-<!-- <div class="jumbotron">
+<div class="jumbotron text-center">
+  <!-- <h1>{{ title }}</h1>
+  <br /> -->
   <div class="container">
     <div class="row">
-      <div class="col-md-6">
-        <app-users-list></app-users-list>
+      <div class="col-sm-6">
+        <!-- <input type="text" class="form-control" style="max-width: 20px;" />
+        <button class="btn btn-outline-secondary pull-right">Click</button>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus
+        eveniet rerum cupiditate ipsum placeat sed labore, expedita esse!
+        Voluptate, ea sint facere dolor vel repellat nulla fugit quis quisquam
+        tenetur? -->
+        <app-parent-textbox></app-parent-textbox>
       </div>
-      <div class="col-md-6">
-        <!-- <label for="" class="label-danger">Testing</label> --
-        <app-users-details></app-users-details>
+      <div class="col-sm-6">
+        <app-child-text-display></app-child-text-display>
       </div>
-      <!-- <div class="row">
-        <ul class="pager">
-          <li><a href="#">Previous</a></li>
-          <li><a href="#">Next</a></li>
-        </ul>
-      </div> --
-    </div>
-  </div> -->
-
-<!-- <table class="table table-striped table-hover">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Maiden</th>
-      <th scope="col">Age</th>
-      <th scope="col">Gender</th>
-      <th scope="col">Email</th>
-      <th scope="col">Username</th>
-      <th scope="col">Status</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let user of users">
-      <th scope="row">{{ user.id }}</th>
-      <td>{{ user.firstName }}</td>
-      <td>{{ user.lastName }}</td>
-      <td>{{ user.maidenName }}</td>
-      <td>{{ user.age }}</td>
-      <td>{{ user.gender }}</td>
-      <td>{{ user.email }}</td>
-      <td>{{ user.username }}</td>
-      <td>
-        <input
-          type="checkbox"
-          role="switch"
-          [checked]="user.status === 'active'"
-        />
-      </td>
-    </tr>
-  </tbody>
-</table> -->
-
-<!-- <div id="carouselExampleIndicators" class="carousel slide">
-  <div class="carousel-indicators">
-    <button
-      type="button"
-      data-bs-target="#carouselExampleIndicators"
-      data-bs-slide-to="0"
-      class="active"
-      aria-current="true"
-      aria-label="Slide 1"
-    ></button>
-    <button
-      type="button"
-      data-bs-target="#carouselExampleIndicators"
-      data-bs-slide-to="1"
-      aria-label="Slide 2"
-    ></button>
-    <button
-      type="button"
-      data-bs-target="#carouselExampleIndicators"
-      data-bs-slide-to="2"
-      aria-label="Slide 3"
-    ></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <!-- https://i.dummyjson.com/data/products/30/1.jpg
-      https://i.dummyjson.com/data/products/30/2.jpg
-      https://i.dummyjson.com/data/products/30/3.jpg
-      https://i.dummyjson.com/data/products/30/thumbnail.jpg --
-      <img
-        src="https://i.dummyjson.com/data/products/30/1.jpg"
-        class="d-block w-100"
-        width="50"
-        height="300"
-        alt="..."
-      />
-    </div>
-    <div class="carousel-item">
-      <img
-        src="https://i.dummyjson.com/data/products/30/2.jpg"
-        class="d-block w-100"
-        width="50"
-        height="300"
-        alt="..."
-      />
-    </div>
-    <div class="carousel-item">
-      <img
-        src="https://i.dummyjson.com/data/products/30/3.jpg"
-        class="d-block w-100"
-        width="50"
-        height="300"
-        alt="..."
-      />
-    </div>
-    <div class="carousel-item">
-      <img
-        src="https://i.dummyjson.com/data/products/30/thumbnail.jpg"
-        class="d-block w-100"
-        width="50"
-        height="300"
-        alt="..."
-      />
     </div>
   </div>
-  <button
-    class="carousel-control-prev"
-    type="button"
-    data-bs-target="#carouselExampleIndicators"
-    data-bs-slide="prev"
-  >
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button
-    class="carousel-control-next"
-    type="button"
-    data-bs-target="#carouselExampleIndicators"
-    data-bs-slide="next"
-  >
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
 </div>
-</div> -->
