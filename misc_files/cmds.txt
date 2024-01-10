@@ -1,0 +1,14 @@
+fossil settings ignore-glob "node_modules,build,dist"
+
+json-server --watch data\db.json
+https://stackoverflow.com/a/76839131
+"serve-json": "json-server --watch ./src/db.json --port 5000"
+npm run serve-json
+
+ng new my-sample-angular-project
+npm install -g json-server
+cd my-sample-angular-project
+ng serve
+
+ng g c personComponent
+ng g s personComponent\PersonService
