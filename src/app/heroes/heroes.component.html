@@ -25,16 +25,10 @@
 
 <h2 *ngIf="!selectedHero">My Heroes</h2><h2 *ngIf="selectedHero">{{selectedHero.name | uppercase}} Details</h2>
 <ul class="heroes">
-  <li *ngFor="let hero of heroList">
-    <!-- <button [class.selected]="hero === selectedHero" type="button" (click)="onSelect(hero)">
-      <span class="badge">{{hero.id}}</span>
-      <span class="name">{{hero.name}}</span>
-    </button> -->
-    <button 
-        [class.selected]="hero === selectedHero" 
-        [attr.data-count]="hero.id" 
-        (click)="onSelect(hero)">
-      {{hero.name}}
-    </button>
+  <li *ngFor="let hero of heroList" 
+    [class.selected]="hero === selectedHero" 
+    (click)="onSelect(hero)">
+    <span class="badge">{{hero.id}}</span>
+    <span>{{hero.name}}</span>
   </li>
 </ul>
