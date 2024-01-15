@@ -20,7 +20,7 @@ input[type="text"],
 button {
   color: #333;
 }
-
+/* 
 button {
   background-color: #eee;
   border: none;
@@ -41,4 +41,32 @@ button:disabled {
   background-color: #eee;
   color: #aaa;
   cursor: auto;
+} */
+
+table {
+  border-collapse: collapse;
+  width: auto;
+}
+
+table td,
+table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  margin: 10rem;
+}
+
+table td tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table td tr:hover {
+  background-color: #ddd;
+}
+
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #333;
+  color: white;
 }
