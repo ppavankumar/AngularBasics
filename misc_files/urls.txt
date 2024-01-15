@@ -10,3 +10,17 @@ https://www.youtube.com/watch?v=UwTMjTt8jME&list=PL1BztTYDF-QNrtkvjkT6Wjc8es7QB4
 
 # https://dummyjson.com/users?select=id,firstName,lastName,maidenName,age,gender,email,username,department
 
+# CURRENT ## https://angular.io/tutorial/tour-of-heroes/toh-pt1
+
+https://angular.dev/
+
+https://stackoverflow.com/questions/77488404/how-to-display-components-using-their-selector-in-angular-17
+
+https://stackoverflow.com/questions/77454741/why-doesnt-app-module-exist-in-angular-17
+
+https://stackoverflow.com/questions/76801893/angular-16-creating-a-standalone-app-with-standalone-components-how-and-where
+
+https://angular.io/guide/standalone-components
+
+https://stackoverflow.com/questions/40695025/whats-the-difference-between-browsermodule-and-platformbrowserdynamic
+
