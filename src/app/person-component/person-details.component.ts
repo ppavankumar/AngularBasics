@@ -5,13 +5,13 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-person-component',
+  selector: 'app-person-details',
   standalone: true,
   imports: [FormsModule, CommonModule],
-  templateUrl: './person-component.component.html',
-  styleUrl: './person-component.component.css'
+  templateUrl: './person-details.component.html',
+  styleUrl: './person-details.component.css'
 })
-export class PersonComponentComponent {
+export class PersonDetailsComponent {
   title = 'httpGet Example';
   people: Person[] = [];
   person = new Person();

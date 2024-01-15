@@ -9,12 +9,28 @@
       "name": "Sachin Tendulkar"
     },
     {
-      "id": "3",
-      "name": "test1"
+      "id": "4",
+      "name": "test"
     },
     {
       "id": "4",
       "name": "test"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "iPhone 9",
+      "description": "An apple mobile which is nothing like apple",
+      "price": 549,
+      "quantity": 2
+    },
+    {
+      "id": 2,
+      "name": "iPhone X",
+      "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
+      "price": 899,
+      "quantity": 5
     }
   ]
 }

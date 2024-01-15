@@ -12,3 +12,12 @@ ng serve
 
 ng g c personComponent
 ng g s personComponent\PersonService
+
+ng g module crud --routing
+ng g c crud/home
+ng g c crud/details
+ng g c crud/create
+ng g c crud/update
+ng g s crud/crud
+
+ng g i crud/product
